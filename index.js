@@ -12,7 +12,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var taskRouter = require('./routes/task');
-var userTaskRouter = require('./routes/usertask');
+var userTaskRouter = require('./routes/userTask');
 
 // Create Express App
 var app = express();
@@ -31,10 +31,10 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // Task API
-app.use('/tasks', taskRouter);
+app.use('/task', taskRouter);
 
 // User Task API
-app.use('/usertask', userTaskRouter);
+app.use('/userTask', userTaskRouter);
 
 // Handle Error
 app.use(function (req, res, next) {
